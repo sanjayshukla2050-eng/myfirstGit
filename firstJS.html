@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Input Program</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>JavaScript User Input Example</h2>
+
+Enter First Number:
+<input type="number" id="num1"><br>
+
+Enter Second Number:
+<input type="number" id="num2"><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script>
+function calculate() {
+  let a = Number(document.getElementById("num1").value);
+  let b = Number(document.getElementById("num2").value);
+
+  let sum = a + b;
+  let difference = a - b;
+  let product = a * b;
+  let division = a / b;
+
+  document.getElementById("result").innerHTML =
+    "Sum: " + sum + "<br>" +
+    "Difference: " + difference + "<br>" +
+    "Product: " + product + "<br>" +
+    "Division: " + division;
+}
+</script>
+
+</body>
+</html>
